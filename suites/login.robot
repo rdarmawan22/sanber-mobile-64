@@ -1,7 +1,9 @@
 *** Settings ***
-Resource        ../pageObjects/homePage/homePage.robot
-Resource        ../pageObjects/loginPage/loginPage.robot
-Resource        ../pageObjects/base.robot
+Resource          ../pageObjects/base.robot
+Resource          ../pageObjects/homePage/homePage.robot
+Resource          ../pageObjects/loginPage/loginPage.robot
+Test Setup        Run Keywords    Open Flight Application    AND   Verify Sign In Screen Appears
+Test Teardown     Close Flight Application
 
 # Input Password
 # Click Sign In Button On Sign In Screen
@@ -9,9 +11,15 @@ Resource        ../pageObjects/base.robot
 
 *** Test Cases ***
 User Should Be Able To Login with Valid Data
-    Open Flight Application
-    Verify Home Screen Appears
     Click Sign In Button On Home Screen
-    Verify Sign In Screen Appears
-    Input Username
-    Close Flight Application
+    Input Username    username=${VALID_USERNAME}
+    Input Password    password=${VALID_PASSWORD}
+    Click Sign In Button
+    # Sleep       5s
+
+User Should Not Be Able To Login with invalid Data
+    Click Sign In Button On Home Screen
+    Input Username    username=${INVALID_USERNAME}
+    Input Password    password=${$INVALID_PASSWORD}
+    Click Sign In Button
+    # Sleep       5s
