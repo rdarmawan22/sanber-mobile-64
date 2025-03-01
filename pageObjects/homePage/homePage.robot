@@ -4,12 +4,11 @@ Variables    home-page-locators.yaml
 
 *** Variables ***
 ${VALID_FLIGHT_NUMBER}    DA935
+${INVALID_FLIGHT_NUMBER}  JA513
 
 *** Keywords ***
 Verify Home Screen Appears
     Wait Until Element Is Visible        locator=//android.widget.ImageView[@resource-id="com.example.myapplication:id/imageView4"]
-
-
 Click Sign In Button On Home Screen
     Click Element        locator=${sign_in_login_button}
 
@@ -41,6 +40,8 @@ Click Search Flight Number
 Verify Message Icon Appears
     Wait Until Element Is Visible    locator=//android.widget.ImageButton[@resource-id="com.example.myapplication:id/fab"]
 
+Verify Invalid Message Appears
+    Wait Until Page Contains    text="Please enter valid Flight Number"
 Verify Destination Appears
     Wait Until Element Is Visible    locator=//android.widget.TextView[@text="Toronto to Paris"]
 

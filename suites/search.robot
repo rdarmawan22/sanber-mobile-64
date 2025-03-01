@@ -11,7 +11,7 @@ User Should Be Able To Search Flight Number
     Click Sign In Button On Home Screen
     Verify Sign In Screen Appears
     Input Username    username=${VALID_USERNAME}
-    Input Password    password=${VALID_PASSWORD}
+    loginPage.Input Password    password=${VALID_PASSWORD}
     Click Sign In Button
     Verify Username Apprears
     Verify Book Button Apprears
@@ -28,8 +28,19 @@ User Should Be Able To Search Flight Number
     Verify Departed Appears
     Verify Flight Number Appears
     Verify Time Appears
-    Verify Arrival Status
-
-
-    
-     
+    Verify Arrival Status     
+User Input Wrong Flight Number
+    Click Sign In Button On Home Screen
+    Verify Sign In Screen Appears
+    Input Username    username=${VALID_USERNAME}
+    loginPage.Input Password    password=${VALID_PASSWORD}
+    Click Sign In Button
+    Verify Username Apprears
+    Verify Book Button Apprears
+    Verify Search Button Apprears
+    Verify Check In Button Appears
+    Click Search Button
+    Verify Enter flight Number Appears
+    Input Flight Number    flight_number=${INVALID_FLIGHT_NUMBER}
+    Click Search Flight Number
+    Verify Invalid Message Appears
