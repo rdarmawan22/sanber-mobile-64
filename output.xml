@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-01T09:49:45.734427" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="F:\Data\bootcamp\sanber-mobile-64\suites\login.robot">
+<test id="s1-t1" name="User Should Be Able To Login with Valid Data" line="11">
+<kw name="Open Flight Application" owner="base">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-03-01T09:49:45.848208" elapsed="5.298256"/>
+</kw>
+<status status="PASS" start="2025-03-01T09:49:45.847854" elapsed="5.298736"/>
+</kw>
+<kw name="Verify Home Screen Appears" owner="homePage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-01T09:49:51.975489" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.example.myapplication:id/imageView4"]</msg>
+<arg>locator=//android.widget.ImageView[@resource-id="com.example.myapplication:id/imageView4"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-01T09:49:51.147065" elapsed="0.828499"/>
+</kw>
+<status status="PASS" start="2025-03-01T09:49:51.146836" elapsed="0.828801"/>
+</kw>
+<kw name="Click Sign In Button On Home Screen" owner="homePage">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-01T09:49:51.976852" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2025-03-01T09:49:52.058740" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>locator=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-01T09:49:51.976064" elapsed="0.082751"/>
+</kw>
+<status status="PASS" start="2025-03-01T09:49:51.975858" elapsed="0.083032"/>
+</kw>
+<kw name="Verify Sign In Screen Appears" owner="loginPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-01T09:49:53.319512" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]
+xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>locator=//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-01T09:49:52.059342" elapsed="1.260247"/>
+</kw>
+<status status="PASS" start="2025-03-01T09:49:52.059134" elapsed="1.260536"/>
+</kw>
+<kw name="Input Username" owner="loginPage">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-03-01T09:49:53.320891" level="INFO">Typing text 'support@ngendigital.com' into text field '//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg time="2025-03-01T09:49:53.359748" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>locator=//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</arg>
+<arg>text=${VALID_USERNAME}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-03-01T09:49:53.320083" elapsed="0.039741"/>
+</kw>
+<status status="PASS" start="2025-03-01T09:49:53.319895" elapsed="0.039999"/>
+</kw>
+<kw name=" Close Flight Application" owner="base">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-03-01T09:49:53.360343" elapsed="0.157891"/>
+</kw>
+<status status="PASS" start="2025-03-01T09:49:53.360140" elapsed="0.158176"/>
+</kw>
+<status status="PASS" start="2025-03-01T09:49:45.847443" elapsed="7.671069"/>
+</test>
+<status status="PASS" start="2025-03-01T09:49:45.735250" elapsed="7.783790"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
