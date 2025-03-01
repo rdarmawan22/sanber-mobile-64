@@ -19,7 +19,7 @@ Input Username
 Input Password
     [Arguments]    ${password}
     Input Text    locator=${password_input}    text=${password}
-
+    
 Click Sign In Button
     Click Element    locator=${sign_in_button}
 

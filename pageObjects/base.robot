@@ -12,13 +12,13 @@ ${AUTOMATION_NAME}         uiautomator2
 
 *** Keywords ***
 Open Flight Application
-    Open Application    remote_url=${REMOTE_URL}
-    ...    platformName=${PLATFORM_NAME}
-    ...    platformVersion=${PLATFORM_VERSION}
-    ...    deviceName=${DEVICE_NAME} 
-    ...    appPackage=${APP_PACKAGE}
-    ...    appActivity=${APP_ACTIVITY}
-    ...    automationName=${AUTOMATION_NAME}
+   Open Application    remote_url=${REMOTE_URL}
+   ...    platformName=${PLATFORM_NAME}
+   ...    platformVersion=${PLATFORM_VERSION}
+   ...    deviceName=${DEVICE_NAME} 
+   ...    appPackage=${APP_PACKAGE}
+   ...    appActivity=${APP_ACTIVITY}
+   ...    automationName=${AUTOMATION_NAME}
 
- Close Flight Application
-    Close Application
+Close Flight Application
+   Close Application
