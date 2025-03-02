@@ -42,6 +42,7 @@ Verify Message Icon Appears
 
 Verify Invalid Message Appears
     Wait Until Page Contains    text="Please enter valid Flight Number"
+    
 Verify Destination Appears
     Wait Until Element Is Visible    locator=//android.widget.TextView[@text="Toronto to Paris"]
 
@@ -62,3 +63,87 @@ Verify Time Appears
 
 Verify Arrival Status
     Wait Until Element Is Visible    locator=//android.widget.TextView[@text="On Time"]
+
+Click Book Button
+    Click Element    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/book"]
+
+Verify One Way Trip Appears
+    Wait Until Element Is Visible    locator=//android.widget.TextView[@text="ONE WAY"]
+
+Verify Round Trip Appears
+    Wait Until Element Is Visible    locator=//android.widget.TextView[@text="ROUND TRIP"]
+
+Click From City Field
+    Click Element    locator=//android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerFrom"]
+
+Verify From City Field
+    Wait Until Element Is Visible    locator=//android.widget.TextView[@resource-id="android:id/text1" and @text="Chicago"]
+
+Click Chicago Value in From City Field
+    Click Element    locator=//android.widget.TextView[@resource-id="android:id/text1" and @text="Chicago"]
+
+Click To City Field
+    Click Element    locator=//android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerTo"]
+
+Verify To City Field
+    Wait Until Element Is Visible    locator=//android.widget.TextView[@resource-id="android:id/text1" and @text="Paris"]
+
+Click Value on City Field
+    Click Element    locator=//android.widget.TextView[@resource-id="android:id/text1" and @text="Paris"]
+
+Click Class Field
+    Click Element    locator=//android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerClass"]
+
+Verify Class Field
+    Wait Until Element Is Visible    locator=//android.widget.TextView[@resource-id="android:id/text1" and @text="First"]
+
+Click First Value in Class Field
+    Click Element    locator=//android.widget.TextView[@resource-id="android:id/text1" and @text="First"]
+
+Click Start Date Field
+    Click Element    locator=//android.widget.TextView[@resource-id="com.example.myapplication:id/textStartDate"]
+
+Verify Calender Appears
+    Wait Until Element Is Visible    locator=//android.view.View[@resource-id="android:id/month_view"]
+
+Click Value in Start Date Field
+    Click Element    locator=//android.view.View[@content-desc="01 August 2019"]
+
+Click OK Button in Start Date Field
+    Click Element    locator=//android.widget.Button[@resource-id="android:id/button1"]
+
+Click End Date Field
+    Click Element    locator=//android.widget.TextView[@resource-id="com.example.myapplication:id/textEndDate"]
+
+Verify Calender on End Date Appears
+    Wait Until Element Is Visible    locator=//android.view.View[@resource-id="android:id/month_view"]
+
+Click Value in End Date Field
+    Click Element    locator=//android.view.View[@content-desc="02 August 2019"]
+
+Click OK Button in End Date Field
+    Click Element    locator=//android.widget.Button[@resource-id="android:id/button1"]
+
+Click Flight Collom
+    Click Element    locator=//android.widget.RadioButton[@resource-id="com.example.myapplication:id/radioButtonFlight"]
+
+Click Flight and Hotel Collom
+    Click Element    locator=//android.widget.RadioButton[@resource-id="com.example.myapplication:id/radioButtonFlightHotel"]
+
+Click Book Confrim Button
+    Click Element    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/book_flight"]
+
+Verify Price Massage Appears
+    Wait Until Element Is Visible    locator=//android.widget.TextView[@resource-id="com.example.myapplication:id/textView6"]
+
+Verify Start and Return Collom Appears
+    Wait Until Element Is Visible    locator=//android.widget.Button[@text="Start/Return"]
+
+Click One Value of Price
+    Click Element    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/price1"]
+
+Click Confrim Button on Price List
+    Click Element    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/confirm_order"]
+
+Verify Booked Massage Appears
+    Wait Until Element Is Visible    locator=//android.widget.CheckedTextView[@resource-id="com.example.myapplication:id/checkedTextView"]
